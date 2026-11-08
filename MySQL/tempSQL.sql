@@ -1,0 +1,1 @@
+select customers.name, orders.orderid, orders.amount, orders.date, order_items.ammoid, order_items.quantity, ammo.nazv from orders, customers, ammo, order_items where orders.amount > 1 and customers.customerid=orders.customerid and orders.orderid = order_items.orderid and ammo.ammoid = order_items.ammoid;
